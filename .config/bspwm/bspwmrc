@@ -23,14 +23,18 @@ feh --no-fehbg --bg-center ~/.config/bspwm/wallpaper.jpg&
 
 xrandr --output HDMI-0 --mode 1920x1080 --pos 4520x840 --rotate normal --output DP-0 --off --output DP-1 --mode 1920x1080 --pos 3440x0 --rotate left --output DP-2 --primary --mode 3440x1440 --pos 0x480 --rotate normal --output DP-3 --off --output DP-4 --off --output DP-5 --off
 
+xsetroot -cursor_name Nordic-cursors
+
+
 setxkbmap "ch(de)"
 
 
 
 pgrep -x sxhkd > /dev/null || sxhkd -c ~/.config/bspwm/sxhkdrc &
 
-bspc monitor DP-1 -d 4
-bspc monitor DP-2 -d 1 2 3 5 6
+bspc monitor DP-1 -d discord
+bspc monitor DP-2 -d files browser steam code 6
+bspc monitor HDMI-1 -d 7
 
 
 bspc config automatic_scheme alternate

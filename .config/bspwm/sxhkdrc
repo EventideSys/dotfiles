@@ -81,8 +81,26 @@ super + {o,i}
 	bspc wm -h on
 
 # focus or send to the given desktop
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+#super + {_,shift + }{1-9,0}
+#	bspc {desktop -f,node -d} '^{1-9,10}'
+
+super + {_,shift + }1
+	bspc {desktop -f,node -d} files
+
+super + {_,shift + }2
+	bspc {desktop -f,node -d} browser
+
+super + {_,shift + }3
+	bspc {desktop -f,node -d}steam
+
+super + {_,shift + }4
+	bspc {desktop -f,node -d} discord
+
+super + {_,shift + }5
+	bspc {desktop -f,node -d} code
+
+super + {_,shift + }6
+	bspc {desktop -f,node -d} 6
 
 #
 # preselect
