@@ -53,3 +53,6 @@ bspc rule -a steam desktop='^3'
 conditional_run compton
 conditional_run polybar example
 
+# move mouse to center of primary screen
+xdotool mousemove 1720 1300
+
