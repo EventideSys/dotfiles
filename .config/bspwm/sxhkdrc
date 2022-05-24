@@ -71,7 +71,7 @@ super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # focus the last node/desktop
-super + {grave,Tab}
+alt + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
@@ -91,7 +91,7 @@ super + {_,shift + }2
 	bspc {desktop -f,node -d} browser
 
 super + {_,shift + }3
-	bspc {desktop -f,node -d}steam
+	bspc {desktop -f,node -d} steam
 
 super + {_,shift + }4
 	bspc {desktop -f,node -d} discord
@@ -137,3 +137,16 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+
+
+XF86AudioPlay
+	playerctl play-pause
+
+XF86AudioRaiseVolume
+	pamixer -i 5
+
+XF86AudioLowerVolume
+	pamixer -d 5

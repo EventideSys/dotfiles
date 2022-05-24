@@ -1,0 +1,4 @@
+
+xrdb ~/.Xresources
+
+exec bspwm
