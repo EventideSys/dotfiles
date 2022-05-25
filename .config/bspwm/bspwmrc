@@ -18,6 +18,23 @@ function conditional_run {
     fi
 }
 
+function conditional_run_alt {
+    local program_name=$1
+    local run_name=$2
+
+    ps_result=$(ps aux \
+        | grep "${run_name}" \
+        | grep -v "grep" \
+        | wc -l
+        )
+    if [ $ps_result -eq 0 ]; then
+        echo "Running $program_name"
+        `$program_name` &
+    else
+        echo "$program_name already running"
+    fi
+}
+
 
 feh --no-fehbg --bg-fill ~/.config/bspwm/wallpaper.jpg&
 
@@ -54,14 +71,14 @@ bspc rule -a Steam desktop=steam
 bspc rule -a KeePassXC state=floating
 
 killall "compton"
-compton &
+compton --vsync &
 
 killall "polybar"
 polybar example &
 
 conditional_run discord
 
-conditional_run vivaldi-stable
+conditional_run_alt vivaldi-stable vivaldi-bin
 
 killall "easyeffects"
 easyeffects --gapplication-service &
@@ -71,4 +88,5 @@ conditional_run dropbox
 killall "qpwgraph"
 qpwgraph -ma ~/.config/qpwgraph/Patchbay.qpwgraph &
 
-conditional_run parcellite &
+killall "redshift"
+redshift -l 47:8 &

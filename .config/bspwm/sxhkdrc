@@ -150,3 +150,9 @@ XF86AudioRaiseVolume
 
 XF86AudioLowerVolume
 	pamixer -d 5
+
+super + shift + s
+	~/.config/bspwm/screenshot_region.sh
+
+Print
+	~/.config/bspwm/screenshot_full.sh
