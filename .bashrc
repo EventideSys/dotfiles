@@ -14,6 +14,8 @@ export KDEHOME="$XDG_CONFIG_HOME"/kde
 export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
+export HISTFILE="$XDG_STATE_HOME"/bash/history
+
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "fish" && -z ${BASH_EXECUTION_STRING} ]]
 then
 	exec fish

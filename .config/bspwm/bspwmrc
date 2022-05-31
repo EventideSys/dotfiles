@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 
 # Runs a program unless that program is already running
@@ -71,7 +71,7 @@ bspc rule -a Steam desktop=steam
 bspc rule -a KeePassXC state=floating
 
 killall "compton"
-compton --vsync &
+compton -b --backend glx --vsync &
 
 killall "polybar"
 polybar example &
@@ -90,3 +90,6 @@ qpwgraph -ma ~/.config/qpwgraph/Patchbay.qpwgraph &
 
 killall "redshift"
 redshift -l 47:8 &
+
+killall "dunst"
+dunst &
