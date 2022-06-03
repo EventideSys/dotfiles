@@ -3,8 +3,6 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-#set -g --export
-set -g --export EDITOR nvim
 
 set fish_greeting
 
@@ -15,3 +13,5 @@ alias l='ls -lah'
 alias ll='ls -lh'
 alias la='ls -lAh'
 alias vim='nvim'
+alias nv='nvim'
+alias v='nvim'
