@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	kitty
+	kitty --session ~/.config/kitty/startup.conf
 
 # program launcher
 super + @space
