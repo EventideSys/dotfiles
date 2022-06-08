@@ -3,25 +3,27 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'sheerun/vim-polyglot'
+Plug 'neoclide/coc.nvim', {'commit': 'ddf596e387a83476c4c4adceec332279f95381b4'} " {'branch': 'release'}
+Plug 'sheerun/vim-polyglot', {'commit': '38282d58387cff48ac203f6912c05e4c8686141b'}
 " Plug 'valloric/youcompleteme'
 " Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
-Plug 'preservim/nerdtree'
-Plug 'ryanoasis/vim-devicons'
-Plug 'lukas-reineke/indent-blankline.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'preservim/nerdtree', {'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424'}
+Plug 'ryanoasis/vim-devicons', {'commit': 'a2258658661e42dd4cdba4958805dbad1fe29ef4'}
+Plug 'lukas-reineke/indent-blankline.nvim', {'commit': '6177a59552e35dfb69e1493fd68194e673dc3ee2'}
+Plug 'nvim-lua/plenary.nvim', {'commit': '54b2e3d58f567983feabaeb9408eccf6b7f32206'}
+Plug 'nvim-telescope/telescope.nvim', {'commit': 'd3aad43b3fcf707052f7dd8a7c7072fa69773f3c'}
 
-Plug 'edluffy/hologram.nvim'
-
+Plug 'edluffy/hologram.nvim', {'commit': '7bd3ffb073dde94c8d86c1b49c47ef9d2f2bc605'}
+Plug 'ap/vim-css-color', {'commit': '8bf943681f92c81a8cca19762a1ccec8bc29098a'}
 
 " Plug 'jdonaldson/vaxe'
 
 
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'liuchengxu/space-vim-dark', {'commit': 'd24c6c27b49c1ab49416a47d96979481281f53b5'}
+
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -69,5 +71,15 @@ set nowritebackup
 "set tabstop=4
 set tabstop=4 shiftwidth=4 expandtab
 
-colorscheme gruvbox
+
+
+"   Range:   233 (darkest) ~ 238 (lightest)
+"   Default: 235
+let g:space_vim_dark_background = 234
+
+colorscheme space-vim-dark
+hi Comment cterm=italic
+set termguicolors
+hi LineNr ctermbg=NONE guibg=NONE
+hi Comment guifg=#5C6370 ctermfg=59
 
