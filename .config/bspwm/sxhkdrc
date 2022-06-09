@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -combi-modi window,drun,ssh -theme solarized -font "hack 10" -show combi
+	~/.config/rofi/launchers/text/launcher.sh 
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -19,8 +19,11 @@ super + Escape
 #
 
 # quit/restart bspwm
-super + alt + {q,r}
-	bspc {quit,wm -r}
+super + alt + r
+	bspc wm -r
+
+super + alt + q
+    ~/.config/rofi/powermenu/powermenu.sh
 
 # close and kill
 #super + {_,shift + }w
