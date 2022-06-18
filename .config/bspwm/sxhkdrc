@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	kitty --session ~/.config/kitty/startup.conf
+	kitty
 
 # program launcher
 super + @space
@@ -156,6 +156,9 @@ XF86AudioRaiseVolume
 
 XF86AudioLowerVolume
 	pamixer -d 5
+
+XF86AudioMute
+    pamixer --toggle-mute
 
 super + shift + s
 	~/.config/bspwm/screenshot_region.sh

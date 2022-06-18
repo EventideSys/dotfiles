@@ -44,6 +44,8 @@ xsetroot -cursor_name left_ptr
 
 
 setxkbmap "ch(de)"
+setxkbmap -option caps:escape_shifted_capslock 
+
 
 
 

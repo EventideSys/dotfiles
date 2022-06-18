@@ -67,7 +67,7 @@ function! ShowDocumentation()
 endfunction
 
 
-set number
+set number relativenumber
 set hidden
 
 set nobackup
