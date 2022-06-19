@@ -72,8 +72,10 @@ bspc rule -a discord desktop=discord state=fullscreen
 bspc rule -a Steam desktop=steam
 bspc rule -a KeePassXC state=floating
 
-killall "compton"
-compton -b --backend glx --vsync &
+killall "picom"
+# compton -b --backend glx --vsync &
+picom -b --backend glx --vsync --blur-background --blur-strength 5 --blur-method dual_kawase --blur-background-exclude 'window_type = "dock"' --blur-background-exclude 'class_g = "slop"' &
+
 
 killall "polybar"
 polybar example &
