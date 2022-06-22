@@ -3,10 +3,10 @@
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 " Declare the list of plugins.
-Plug 'neoclide/coc.nvim', {'commit': 'ddf596e387a83476c4c4adceec332279f95381b4'} " {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'commit': 'ddf596e387a83476c4c4adceec332279f95381b4'} " {'branch': 'release'}
 Plug 'sheerun/vim-polyglot', {'commit': '38282d58387cff48ac203f6912c05e4c8686141b'}
-" Plug 'valloric/youcompleteme'
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'ycm-core/youcompleteme'
+"ycm-core/YouCompleteMe Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
 Plug 'preservim/nerdtree', {'commit': 'eed488b1cd1867bd25f19f90e10440c5cc7d6424'}
@@ -18,11 +18,12 @@ Plug 'nvim-telescope/telescope.nvim', {'commit': 'd3aad43b3fcf707052f7dd8a7c7072
 Plug 'edluffy/hologram.nvim', {'commit': '7bd3ffb073dde94c8d86c1b49c47ef9d2f2bc605'}
 Plug 'ap/vim-css-color', {'commit': '8bf943681f92c81a8cca19762a1ccec8bc29098a'}
 
-" Plug 'jdonaldson/vaxe'
+Plug 'jdonaldson/vaxe'
 
 
 " Plug 'morhetz/gruvbox'
-Plug 'liuchengxu/space-vim-dark', {'commit': 'd24c6c27b49c1ab49416a47d96979481281f53b5'}
+" Plug 'liuchengxu/space-vim-dark', {'commit': 'd24c6c27b49c1ab49416a47d96979481281f53b5'}
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 
 
 " List ends here. Plugins become visible to Vim after this call.
@@ -43,12 +44,6 @@ nnoremap <C-g> <cmd>Telescope buffers<cr>
 
 
 
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
 
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
@@ -72,24 +67,29 @@ set hidden
 
 set nobackup
 set nowritebackup
+set autowrite
 
 "set expandtab
 "set tabstop=4
 set tabstop=4 shiftwidth=4 expandtab
 
 
+let g:catppuccin_flavour = "mocha" " latte, frappe, macchiato, mocha
+"let g:transparent_background = true
+colorscheme catppuccin
+
 
 "   Range:   233 (darkest) ~ 238 (lightest)
 "   Default: 235
-let g:space_vim_dark_background = 234
+" let g:space_vim_dark_background = 234
 
-colorscheme space-vim-dark
-hi Comment cterm=italic
-set termguicolors
-hi LineNr ctermbg=NONE guibg=NONE
-hi Comment guifg=#5C6370 ctermfg=59
+"#colorscheme space-vim-dark
+"#hi Comment cterm=italic
+"3set termguicolors
+"hi LineNr ctermbg=NONE guibg=NONE
+"hi Comment guifg=#5C6370 ctermfg=59
 
-"hi Normal     ctermbg=NONE guibg=NONE
-"hi LineNr     ctermbg=NONE guibg=NONE
-"hi SignColumn ctermbg=NONE guibg=NONE
+hi Normal     ctermbg=NONE guibg=NONE
+hi LineNr     ctermbg=NONE guibg=NONE
+hi SignColumn ctermbg=NONE guibg=NONE
 
