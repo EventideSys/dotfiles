@@ -71,6 +71,7 @@ bspc rule -a Vivaldi-stable desktop=browser
 bspc rule -a discord desktop=discord state=fullscreen
 bspc rule -a Steam desktop=steam
 bspc rule -a KeePassXC state=floating
+bspc rule -a *:*:"Picture in picture" state=floating
 
 killall "picom"
 # compton -b --backend glx --vsync &
