@@ -5,7 +5,7 @@ call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 " Declare the list of plugins.
 " Plug 'neoclide/coc.nvim', {'commit': 'ddf596e387a83476c4c4adceec332279f95381b4'} " {'branch': 'release'}
 Plug 'sheerun/vim-polyglot', {'commit': '38282d58387cff48ac203f6912c05e4c8686141b'}
-Plug 'ycm-core/youcompleteme'
+Plug 'ycm-core/youcompleteme', {'commit': '4237c4647ec30215223d597f6172c8c46b8b239e'}
 "ycm-core/YouCompleteMe Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 
@@ -18,7 +18,10 @@ Plug 'nvim-telescope/telescope.nvim', {'commit': 'd3aad43b3fcf707052f7dd8a7c7072
 Plug 'edluffy/hologram.nvim', {'commit': '7bd3ffb073dde94c8d86c1b49c47ef9d2f2bc605'}
 Plug 'ap/vim-css-color', {'commit': '8bf943681f92c81a8cca19762a1ccec8bc29098a'}
 
-Plug 'jdonaldson/vaxe'
+Plug 'jdonaldson/vaxe', {'commit': '93774994b15499356d9ad665546e2ddd26271352'}
+Plug 'vimwiki/vimwiki', {'commit': '63af6e72dd3fa840bffb3ebcb8c96970c02e0913'}
+Plug 'michal-h21/vimwiki-sync', {'commit': 'f362dcf0c9ab2a9ad4def899d95390289053c04d'}
+
 
 
 " Plug 'morhetz/gruvbox'
@@ -68,6 +71,9 @@ set hidden
 set nobackup
 set nowritebackup
 set autowrite
+set nocompatible
+filetype plugin on
+syntax on
 
 "set expandtab
 "set tabstop=4

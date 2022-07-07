@@ -160,6 +160,9 @@ XF86AudioLowerVolume
 XF86AudioMute
     pamixer --toggle-mute
 
+super + shift + w
+	~/.config/bspwm/screenshot_window.sh
+
 super + shift + s
 	~/.config/bspwm/screenshot_region.sh
 

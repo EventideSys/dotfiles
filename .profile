@@ -17,6 +17,8 @@ export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export CUDA_CACHE_PATH="$XDG_CACHE_HOME"/nv
 
 export HISTFILE="$XDG_STATE_HOME"/bash/history
+export PATH=$PATH:$HOME/.local/bin
+
 
 if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
  startx
