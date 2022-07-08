@@ -1,4 +1,5 @@
 
+o
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
@@ -14,6 +15,8 @@ Plug 'ryanoasis/vim-devicons', {'commit': 'a2258658661e42dd4cdba4958805dbad1fe29
 Plug 'lukas-reineke/indent-blankline.nvim', {'commit': '6177a59552e35dfb69e1493fd68194e673dc3ee2'}
 Plug 'nvim-lua/plenary.nvim', {'commit': '54b2e3d58f567983feabaeb9408eccf6b7f32206'}
 Plug 'nvim-telescope/telescope.nvim', {'commit': 'd3aad43b3fcf707052f7dd8a7c7072fa69773f3c'}
+Plug 'mcchrish/nnn.vim', {'commit': 'bc6e2e34d9114c93ce50782949d260b4d4f0e2b6'}
+
 
 Plug 'edluffy/hologram.nvim', {'commit': '7bd3ffb073dde94c8d86c1b49c47ef9d2f2bc605'}
 Plug 'ap/vim-css-color', {'commit': '8bf943681f92c81a8cca19762a1ccec8bc29098a'}
@@ -26,11 +29,16 @@ Plug 'michal-h21/vimwiki-sync', {'commit': 'f362dcf0c9ab2a9ad4def899d95390289053
 
 " Plug 'morhetz/gruvbox'
 " Plug 'liuchengxu/space-vim-dark', {'commit': 'd24c6c27b49c1ab49416a47d96979481281f53b5'}
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'catppuccin/nvim', {'as': 'catppuccin', 'commit': 'd46425163dad4cc74910c0c81eeedb00cadf8a61'}
 
-
+Plug 'itchyny/lightline.vim', {'commit': 'b02ef0d9f253dfc1cbb3f340b74998d7a4db0bf6'}
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+
+let g:lightline = {
+      \ 'colorscheme': 'rosepine',
+      \ }
 
 
 nmap <C-b> :NERDTreeToggle<CR>
