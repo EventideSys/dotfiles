@@ -169,5 +169,5 @@ super + shift + s
 Print
 	~/.config/bspwm/screenshot_full.sh
 
-super + y
+super + v
     ~/.config/bspwm/youtube_mpv.sh

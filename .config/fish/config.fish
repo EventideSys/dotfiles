@@ -8,10 +8,7 @@ set fish_greeting
 
 
 # List directory contents
-alias lsa='ls -lah'
-alias l='ls -lah'
-alias ll='ls -lh'
-alias la='ls -lAh'
+alias l='exa -lah --git --icons'
 alias vim='nvim'
 alias nv='nvim'
 alias v='nvim'

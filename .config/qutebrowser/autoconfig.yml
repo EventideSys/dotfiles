@@ -30,8 +30,12 @@ settings:
     global: false
   completion.web_history.max_items:
     global: 0
+  content.geolocation:
+    https://www.google.com: false
   content.local_content_can_access_remote_urls:
     global: true
+  content.netrc_file:
+    global: ~/.config/netrc
   content.notifications.enabled:
     https://calendar.proton.me: true
     https://mail.proton.me: true
@@ -42,6 +46,8 @@ settings:
   content.user_stylesheets:
     global:
     - ~/.config/qutebrowser/youtube-ad.css
+  downloads.remove_finished:
+    global: 500
   hints.uppercase:
     global: true
   statusbar.position:
@@ -56,6 +62,10 @@ settings:
     global: never
   url.default_page:
     global: https://dash.eventide.space
+  url.searchengines:
+    global:
+      DEFAULT: https://searx.eventide.space/?q={}
+      dg: https://duckduckgo.com/?q={}
   url.start_pages:
     global: https://dash.eventide.space
   window.transparent:
